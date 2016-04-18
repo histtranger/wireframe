@@ -6,3 +6,82 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+body {
+  margin: 0;
+}
+
+.logo {
+  width: 4em;
+  margin: .5em
+}
+
+nav {
+  background-color: #666;
+  margin: 0;
+  padding-bottom: .25em;
+  position: relative;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: .5em;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+.banner {
+  max-width: 100%;
+  margin: 0;
+}
+
+.btn {
+  font-size: 1.5em;
+  background-color: #666;
+  border-radius: 20px;
+  padding: .5em .25em;
+  color: #fff;
+  text-decoration: none;
+  float: right;
+}
+
+@media only screen and (min-width: 25em) {
+
+  nav li {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 1em;
+    float: right;
+  }
+
+  nav a:hover {
+    color: #e2e2e2;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  nav li {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    float: right;
+  }
+
+  nav {
+    display: inline-block;
+  }
+
+}
