@@ -18,15 +18,15 @@ body {
 
 nav {
   background-color: #666;
-  margin: 0;
-  padding-bottom: .25em;
+  padding: 0 0 .5em;
   position: relative;
 }
 
 nav li {
   list-style-type: none;
-  display: inline-block;
-  margin-left: .5em;
+  display: block;
+  text-align: center;
+  padding: 0.5em 0;
 }
 
 nav a {
@@ -34,10 +34,32 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: #222;
+}
+
 nav ul {
-  position: absolute;
-  right: 1em;
-  top: 1em;
+  margin: .5em 0 0;
+  padding: 0;
+  display: none;
+}
+
+nav .btn-nav {
+  max-width: 3em;
+  width: 100%;
+  display: block;
+  float: right;
+  margin-top: 1em;
+  margin-right: .75em;
+}
+
+.nav-check {
+  margin-top: -3em;
+  float: right;
+}
+
+.nav-check:checked ~ ul {
+  display: block;
 }
 
 .banner {
@@ -45,14 +67,121 @@ nav ul {
   margin: 0;
 }
 
+.relative {
+  position: relative;
+}
+
 .btn {
-  font-size: 1.5em;
+  font-size: 1.25em;
   background-color: #666;
   border-radius: 20px;
-  padding: .5em .25em;
+  padding: .5em;
   color: #fff;
   text-decoration: none;
-  float: right;
+  position: absolute;
+  right: 1em;
+  top: 60%;
+}
+
+.btn:hover {
+  color: #222;
+}
+
+.card {
+  display: block;
+  margin: 0 auto .75em;
+  background-color: #e2e2e2;
+  border-radius: 25px;
+  max-width: 15em;
+}
+
+.card a {
+  display: block;
+  padding: 1em .5em;
+}
+
+.card:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.card a:first-child {
+  text-decoration: none;
+  color: #000;
+}
+
+.card img {
+  max-width: 8em;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+
+.card h3, .card p {
+  text-align: center;
+  margin: .5em 0;
+}
+
+.btn-card {
+  color: #fff;
+  background-color: #666;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: .5em;
+  margin: 0 2.5em;
+  text-align: center;
+  display: block;
+}
+
+.card:hover .btn-card {
+ background-color: #e2e2e2;
+ color: #000;
+}
+
+hr {
+  margin: 1.5em;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+section p {
+  margin: .5em 1em 0;
+}
+
+.aboutus {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.fotw {
+  width: 100%;
+  max-width: 20em;
+  display: block;
+  margin: .5em auto 1em;
+}
+
+.menuimg {
+  max-width: 5em;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+h4 {
+  text-align: center;
+}
+
+footer {
+  background-color: #666;
+}
+
+footer img {
+  max-width: 7em;
+  margin: 1em .5em;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 25em) {
@@ -69,19 +198,170 @@ nav ul {
     color: #e2e2e2;
   }
 
+  .btn {
+    font-size: 1.5em;
+    background-color: #666;
+    border-radius: 20px;
+    padding: .5em;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    right: 1em;
+    top: 65%;
+  }
+
+ .menudiv {
+   margin: 1em 3em;
+ }
 }
 
 @media only screen and (min-width: 38em) {
 
-  nav li {
-    text-decoration: none;
-    list-style-type: none;
-    display: inline-block;
-    float: right;
+  .navcheck, label {
+    display: none;
   }
 
   nav {
+    width: 100%;
+  }
+
+   nav ul {
+     display: inline-block;
+     margin-right: 1em;
+     float: right;
+     margin-top: 1.5em;
+   }
+
+  nav li {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  nav a {
+    padding-right: .75em;
+    font-size: 1em;
+  }
+
+  nav a:hover {
+    color: #222;
+  }
+
+  .card {
+    display: inline-block;
+    max-width: 13em;
+    margin: .5em auto;
+    width: 100%;
+  }
+
+  .aboutus {
+    max-width: 30em;
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+  }
+
+}
+
+@media only screen and (min-width:60em) {
+
+  nav a {
+    font-size: 1.25em;
+  }
+
+  .btn {
+    font-size: 2em;
+    top: 75%;
+  }
+
+  .card {
+    margin-left: 1.5em;
+  }
+
+  .cardsss {
+    display: block;
+    margin: 0 auto;
+    max-width: 50em
+  }
+
+  .aboutusp, .fotwp {
+    max-width: 45em;
+    display: block;
+    margin: .5em auto;
+  }
+
+  .fotw {
+    max-width: 30em;
+  }
+
+  .menup {
+    max-width: 20em;
     display: inline-block;
   }
 
+  .menuimg{
+    display: inline-block;
+    float: left;
+    margin-right: 3em;
+  }
+
+  h4 {
+    text-align: left;
+    display: block;
+  }
+
+  .textcentre {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width:90em) {
+
+  nav a {
+    font-size: 1.25em;
+  }
+
+  .btn {
+    font-size: 2em;
+    top: 75%;
+  }
+
+  .card {
+    margin-left: 1.5em;
+  }
+
+  .cardsss {
+    display: block;
+    margin: 0 auto;
+    max-width: 50em
+  }
+
+  .aboutusp, .fotwp {
+    max-width: 45em;
+    display: block;
+    margin: .5em auto;
+  }
+
+  .fotw {
+    max-width: 30em;
+  }
+
+  .menup {
+    max-width: 20em;
+    display: inline-block;
+  }
+
+  .menuimg{
+    display: inline-block;
+    float: left;
+    margin-right: 3em;
+  }
+
+  h4 {
+    text-align: left;
+    display: block;
+  }
+
+  .textcentre {
+    text-align: center;
+  }
 }
